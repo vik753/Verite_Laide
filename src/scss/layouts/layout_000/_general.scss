@@ -1,0 +1,22 @@
+* {
+    @include box-sizing(border-box);
+}
+
+html {
+    font-size: $baseFontSize;
+    font-family: $mainFont;
+}
+
+input {
+    @include inputStyle;
+}
+
+//==========for Animation================
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
