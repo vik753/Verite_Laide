@@ -15,6 +15,7 @@ mix.copy('src/*.html', 'dist/')
   .copyDirectory('src/img', 'dist/img/')
   .copyDirectory('src/fonts', 'dist/fonts/')
   .scripts([
+    'node_modules/svgxuse/svgxuse.js', //'npm install --save svgxuse'  SVG usage for IE11
     //'src/js/ssm.min.js', //for create breackpoints
     'src/js/smooth-scroll.min.js', //smooth-scroll
     //'src/js/slick.min.js', //for Slick

@@ -1,9 +1,43 @@
 //=============Header Menu===============
+
 console.log('Hello 333');
 var scroll = new SmoothScroll('a[href*="#"]');
 
+/* $(document).click(function (e){
+  console.log(e.target);
+}) */
 
+var topMobMenuOpen = $('.svg-icon__mobIco-open');
+var navTopMobMenu = $('.nav-topMenu');
+var navTopMobMenuClose = $('.svg-icon__mobIco');
 
+topMobMenuOpen.on('click', mobTopMenuOpen);
+navTopMobMenuClose.on('click', mobTopMenuClose);
+
+function mobTopMenuOpen() {
+  topMobMenuOpen.css({
+    display: 'none'
+  });
+  navTopMobMenu.css({
+    display: 'block',
+    animation: 'bounceInDown 1s'
+  });
+}
+
+function mobTopMenuClose() {
+  //console.log('click');
+  navTopMobMenu.css({
+    animation: 'bounceOutUp 1s',
+  });
+  setTimeout(function () {
+    navTopMobMenu.css({
+      display: 'none'
+    });
+    topMobMenuOpen.css({
+      display: 'block',
+    });
+  }, 900);
+}
 //=======================Media for js
 
 /* function initTablet() {

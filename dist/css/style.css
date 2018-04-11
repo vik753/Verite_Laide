@@ -3785,3 +3785,128 @@ input:focus {
 .visible {
   opacity: 1;
 }
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 40px);
+  top: 1.25rem;
+  right: 1.25rem;
+  position: absolute;
+  border: 1px solid #000;
+}
+
+.header {
+  position: relative;
+}
+
+.svg-icon__mobIco-open {
+  position: absolute;
+  top: 1.6875rem;
+  right: 2.3125rem;
+  display: inline-block;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  fill: #000;
+  cursor: pointer;
+  -webkit-transform: scaleY(0.6);
+          transform: scaleY(0.6);
+}
+
+.nav-topMenu {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.859);
+  border: 2px solid rgba(255, 255, 255, 0.455);
+  display: none;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.topMenu__mobIco {
+  padding-bottom: 1.875rem;
+}
+
+.svg-icon__mobIco {
+  position: absolute;
+  top: 1.875rem;
+  right: 1.875rem;
+  display: inline-block;
+  max-width: 1.5625rem;
+  max-height: 1.5625rem;
+  fill: #a1a1a1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.topMenu__svglink {
+  text-decoration: none;
+}
+
+.topMenu__list {
+  list-style-type: none;
+}
+
+.topMenu__item {
+  display: block;
+}
+
+.topMenu__link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 3.4375rem 0 0;
+  position: relative;
+}
+
+.topMenu__link::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: -8px;
+  width: 80%;
+  height: 1px;
+  background: #424242;
+}
+
+.topMenu__item__socialIcons {
+  display: block;
+  max-width: 9.6875rem;
+  margin: 0 auto;
+  padding: 3.125rem 0 1.875rem 0;
+  text-align: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.topMenu__link_facebook_svg-icon,
+.topMenu__link_instagram_svg-icon,
+.topMenu__link_share_svg-icon {
+  display: inline-block;
+  max-width: 1.375rem;
+  max-height: 1.375rem;
+  fill: #fff;
+}
+
+.topMenu__link_share_svg-icon {
+  margin-right: 0;
+}
+
+.test {
+  font-weight: 300;
+  font-size: 6.25rem;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3rem;
+}
