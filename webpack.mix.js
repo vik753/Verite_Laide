@@ -14,7 +14,7 @@ let mix = require('laravel-mix');
 mix.copy('src/*.html', 'dist/')
   .copyDirectory('src/img', 'dist/img/')
   .copyDirectory('src/fonts', 'dist/fonts/')
-  .scripts([
+  .babel([ //.scripts ***default without Babel convertation***
     'node_modules/svgxuse/svgxuse.js', //'npm install --save svgxuse'  SVG usage for IE11
     //'src/js/ssm.min.js', //for create breackpoints
     'src/js/smooth-scroll.min.js', //smooth-scroll

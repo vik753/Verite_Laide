@@ -29,7 +29,7 @@ function mobTopMenuClose() {
   navTopMobMenu.css({
     animation: 'bounceOutUp 1s',
   });
-  setTimeout(function () {
+  setTimeout(() => {
     navTopMobMenu.css({
       display: 'none'
     });
