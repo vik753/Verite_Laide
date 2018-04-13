@@ -20,3 +20,24 @@ input {
 .visible {
     opacity: 1;
 }
+ 
+//===========container-major__nums=============
+.container-major__num{
+    position: absolute;
+    right: 11px;
+    font-size: rem(14px);
+    color: $blackThemeColor;
+    font-weight: 400;
+    background: $whiteThemeColor;
+    border-radius: 50%;
+}
+
+.container-major__num1 {
+    top: 159px;
+    content: '01.';
+}
+
+.container-major__num2 {
+    top: 585px;
+    content: '02.';
+}
