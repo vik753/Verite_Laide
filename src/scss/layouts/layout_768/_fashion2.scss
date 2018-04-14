@@ -1,5 +1,6 @@
 .container-fashion {
-    margin-top: rem(185px);
+    max-width: rem(728px);
+    margin: rem(185px) auto 0;
 }
 
 .fashion-figure {
@@ -7,12 +8,56 @@
     display: flex;
 }
 
-.container-fashion-figure__img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0;
+.container-fashion-figure__img{
+    width: rem(372px);
+    max-width: rem(372px);
+    height: rem(615px);
 }
 
-.fashion-figure__img {
-    max-height: 100%;
+.fashion-figure__img{
+    flex-basis: rem(372px);
+    justify-self: start;
+    display: block;
+    background: url('#{$img}tablet_fashion.jpg') no-repeat;
+    width: rem(372px);
+    height: rem(615px);
+    padding-left: rem(372px);
+}
+
+.fashion-figure__figcaption{
+    width: 100%;
+}
+
+.fashion-figure__figcaption_title{
+    position: relative;
+    padding-top: rem(220px);
+    top: 0;
+    left: rem(-44px);
+    transform: none;
+    font-size: rem(72px);
+    letter-spacing: 5.5px;
+    &::after{
+        position: absolute;
+        top: 86px;
+        left: -17px;
+        font-size: rem(150px);
+        font-weight: 400;
+    }
+}
+
+.fashion-figure__figcaption_text{
+    display: inline-block;
+    max-width: 252px;
+    padding-top: rem(40px);
+    padding-left: rem(20px);
+}
+
+.fashion-figure__button{
+    position: absolute;
+    display: inline-block;
+    bottom: 124px;
+    right: 74px;
+    max-width: 260px;
+    width: 260px;
+    padding: rem(25px) 0;
 }
