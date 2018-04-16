@@ -1,0 +1,12 @@
+.container-major {
+    &::before {
+        width: calc(100% - 60px);
+        height: calc(100% - 60px);
+        top: rem(60px);
+    }
+}
+
+.topMenu__list {
+    top: 48px;
+}
+
