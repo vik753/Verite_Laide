@@ -57,8 +57,12 @@
     padding-left: rem(20px);
 }
 
-.fashion-figure__figcaption_text-second {
-    display: block;
+.fashion-figure__figcaption_text-ellipsis {
+    display: none;
+}
+
+.fashion-figure__figcaption_text-end {
+    display: inline;
 }
 
 .fashion-figure__button {

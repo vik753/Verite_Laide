@@ -1,21 +1,21 @@
-.container-fashion{
-    margin-top: rem(215px);
+.container-portrait{
+    margin-top: rem(156px);
     position: relative;
 }
 
-.fashion-figure{
+.portrait-figure{
     max-width: 250px;
     margin: 0 auto;
     position: relative;
 }
 
-.container-fashion-figure__img{
+.container-portrait-figure__img{
     margin: 0 auto;
     max-width: 252px;
     height: 273px;
 }
 
-.fashion-figure__figcaption_title{
+.portrait-figure__figcaption_title{
     position: absolute;
     top: rem(-43px);
     left: 50%;
@@ -26,8 +26,8 @@
     &::after{
         position: absolute;
         top: -20px;
-        left: -52px;
-        content: 'Fashion';
+        left: -43px;
+        content: 'Portrait';
         @include headingMedium;
         color: rgba(241, 241, 241,0.8);
         z-index: -1;
@@ -35,18 +35,18 @@
     }
 }
 
-.fashion-figure__figcaption_text-end{
+.portrait-figure__figcaption_text-end{
     display: none;
 }
 
-.fashion-figure__figcaption_text{
+.portrait-figure__figcaption_text{
     font-size: rem(14px);
     color: $blackThemeColor;
     padding-top: rem(15px);
     line-height: 1.6;
 }
 
-.fashion-figure__button{
+.portrait-figure__button{
     @include whiteButton;
     display: block;
     max-width: 250px;
