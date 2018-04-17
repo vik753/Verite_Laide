@@ -39,4 +39,13 @@
 .events-figure__button {
     bottom: 187px;
     right: 254px;
+    max-width: 260px;
+    width: 260px;
+    padding: rem(27px) 0;
+    &:hover {
+        @include whiteButtonHover;
+    }
+    &:active {
+        @include whiteButtonActive;
+    }
 }
