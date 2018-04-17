@@ -12,7 +12,6 @@ input {
 }
 
 //==========for Animation================
-
 .hidden {
     opacity: 0;
 }
@@ -20,9 +19,9 @@ input {
 .visible {
     opacity: 1;
 }
- 
+
 //===========container-major__nums=============
-.container-major__num{
+.container-major__num {
     position: absolute;
     right: 11px;
     font-size: rem(14px);
@@ -42,4 +41,8 @@ input {
 
 .container-major__num3 {
     top: 1127px;
+}
+
+.container-major__num4 {
+    top: 1690px;
 }

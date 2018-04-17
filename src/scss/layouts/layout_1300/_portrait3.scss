@@ -6,6 +6,7 @@
 
 .container-portrait-figure__img {
     margin: 0 60px 0;
+    height: 751px;
 }
 
 .portrait-figure__img {
@@ -35,6 +36,7 @@
 
 .portrait-figure__button {
     left: 165px;
+    bottom: 340px;
     &:hover {
         @include whiteButtonHover;
     }
@@ -42,49 +44,3 @@
         @include whiteButtonActive;
     }
 }
-
-/* .fashion-figure__figcaption_title {
-    top: 92px;
-    left: -203px;
-    &::after {
-        top: 130px;
-        left: 85px;
-    }
-}
-
-.fashion-figure__figcaption_text {
-    max-width: 380px;
-    padding-top: rem(110px);
-    padding-left: rem(128px);
-}
-
-.container-fashion-figure__img {
-    width: rem(639px);
-    max-width: rem(639px);
-    height: rem(1011px);
-}
-
-.fashion-figure__img {
-    @include flex-basis(rem(639px)); //justify-self: start;
-    display: block;
-    background: url('#{$img}pc_fashion.jpg') no-repeat;
-    width: rem(639px);
-    height: rem(1011px);
-    padding-left: rem(639px);
-}
-
-.fashion-figure__button {
-    position: absolute;
-    display: inline-block;
-    bottom: 435px;
-    right: 252px;
-    max-width: 260px;
-    width: 260px;
-    padding: rem(27px) 0;
-    &:hover {
-        @include whiteButtonHover;
-    }
-    &:active {
-        @include whiteButtonActive;
-    }
-} */

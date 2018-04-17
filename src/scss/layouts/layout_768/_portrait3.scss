@@ -14,7 +14,7 @@
     margin: 0 40px 0;
     order: 2;
     max-width: calc(100% - 40px);
-    height: rem(615px);
+    height: rem(536px);
 }
 
 .portrait-figure__img {
@@ -22,7 +22,7 @@
     display: block;
     background: url('#{$img}tablet_portrait.jpg') no-repeat;
     width: rem(372px);
-    height: rem(615px);
+    height: rem(536px);
     padding-left: rem(372px);
 }
 
@@ -65,7 +65,7 @@
 .portrait-figure__button {
     position: absolute;
     display: inline-block;
-    bottom: 193px;
+    bottom: 116px;
     left: 51px;
     max-width: 260px;
     width: 260px;
