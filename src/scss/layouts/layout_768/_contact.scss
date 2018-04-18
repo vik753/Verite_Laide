@@ -1,0 +1,21 @@
+.contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    max-width: 355px;
+    min-width: auto;
+    left: calc(50% - 10px);
+    transform: translateX(-50%);
+    bottom: -55px;
+}
+
+.contact-form__title {
+    &::after {
+        top: 6px;
+        left: 134px;
+    }
+    &::before {
+        content: '';
+    }
+}

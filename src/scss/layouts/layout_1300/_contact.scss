@@ -1,0 +1,41 @@
+.contact-form {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1140px;
+    max-width: 1140px;
+    bottom: -80px;
+}
+
+.contact-form__title {
+    font-size: rem(18px);
+    position: absolute;
+    top: -45px;
+    left: 517px;
+    &::after {
+        top: 6px;
+        left: -16px;
+        width: 9px;
+        height: 9px;
+    }
+}
+
+.contact-form__input_name,
+.contact-form__input_email {
+    @include inputStyle;
+    margin-bottom: 0;
+    height: 50px;
+    width: 360px;
+    font-size: rem(16px);
+}
+
+.contact-form__input_send {
+    height: 50px;
+    width: 360px;
+    &:hover {
+        @include blackButtonHover;
+    }
+    &:active {
+        @include blackButtonActive;
+    }
+}

@@ -28,3 +28,22 @@
     }
 }
 
+//===========social-icon================
+.pageCover__item__socialIcons {
+    position: absolute;
+    top: 675px;
+    right: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageCover__svglink:not(:last-of-type) {
+    padding-bottom: 30px;
+}
+
+.pageCover__svg-icon {
+    max-width: rem(25px);
+    max-height: rem(25px);
+    fill: #000;
+    cursor: pointer;
+}

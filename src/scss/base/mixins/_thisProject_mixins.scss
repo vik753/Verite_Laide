@@ -32,9 +32,9 @@
 @mixin inputStyle {
     color: #000;
     font-size: 1rem;
-    text-transform: uppercase;
     padding: rem(15px) rem(25px);
     border: 1px solid #000;
+    transition: 0.7s ease;
     //===============focus==
     &:focus {
         outline: none;
@@ -51,6 +51,7 @@
     font-size: rem(18px);
     padding: rem(25px) rem(92px);
     border: 1px solid #000;
+    transition: 0.7s ease;
 }
 
 @mixin whiteButtonHover {
@@ -61,6 +62,7 @@
 @mixin whiteButtonActive {
     background: #3f3e3e;
     color: #ffffff;
+    transition: 0.1s;
 }
 
 //===========blackButton=====
@@ -75,6 +77,7 @@
     padding: rem(15px) rem(139px);
     border: 1px solid $blackThemeColor;
     background: #3f3e3e;
+    transition: 0.7s ease;
 }
 
 @mixin blackButtonHover {
@@ -85,4 +88,5 @@
 @mixin blackButtonActive {
     background: #b3b3b3;
     color: #000;
+    transition: 0.1s ease;
 }
