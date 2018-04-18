@@ -38,7 +38,7 @@
 }
 
 .pageCover__svglink:not(:last-of-type) {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .pageCover__svg-icon {
@@ -47,7 +47,7 @@
     fill: #000;
     cursor: pointer;
     transition: 0.7s ease;
-    &:hover{
+    &:hover {
         fill: $greyBorder;
     }
 }
