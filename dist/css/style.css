@@ -3824,7 +3824,6 @@ body {
   left: 0;
   border: 1px solid #000;
   border-left: none;
-  z-index: 1;
 }
 
 .header {
@@ -3869,7 +3868,7 @@ body {
   max-height: 1.5625rem;
   fill: #a1a1a1;
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
 }
 
 .topMenu__svglink {
@@ -4562,7 +4561,7 @@ body {
     display: inline-block;
     max-width: 275px;
     padding-top: 2.5rem;
-    padding-left: 1.25rem;
+    margin-left: 1.25rem;
   }
   .fashion-figure__figcaption_text-ellipsis {
     display: none;
@@ -4710,7 +4709,12 @@ body {
     max-width: 275px;
     position: relative;
     top: -3.3125rem;
-    left: 1.25rem;
+    left: 3.75rem;
+  }
+  @supports (left: auto) {
+    .events-figure__figcaption_text {
+      left: 20px;
+    }
   }
   .events-figure__figcaption_text-ellipsis {
     display: none;
@@ -4819,6 +4823,11 @@ body {
   .topMenu__list {
     top: 48px;
   }
+  .topMenu__link_facebook_svg-icon:hover,
+  .topMenu__link_instagram_svg-icon:hover,
+  .topMenu__link_share_svg-icon:hover {
+    fill: #7b7b7b;
+  }
   .container-pageCover {
     padding: 16.875rem 2.1875rem 0;
   }
@@ -4889,7 +4898,12 @@ body {
   .fashion-figure__figcaption_text {
     max-width: 380px;
     padding-top: 6.875rem;
-    padding-left: 8rem;
+    margin-left: 13.4375rem;
+  }
+  @supports (margin-left: auto) {
+    .fashion-figure__figcaption_text {
+      margin-left: 8.125rem;
+    }
   }
   .container-fashion-figure__img {
     width: 39.9375rem;
@@ -5003,7 +5017,12 @@ body {
   .events-figure__figcaption_text {
     max-width: 380px;
     top: -92px;
-    left: 80px;
+    left: 200px;
+  }
+  @supports (left: auto) {
+    .events-figure__figcaption_text {
+      left: 80px;
+    }
   }
   .events-figure__button {
     top: 376px;

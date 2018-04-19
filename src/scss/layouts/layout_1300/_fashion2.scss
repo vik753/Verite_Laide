@@ -18,7 +18,10 @@
 .fashion-figure__figcaption_text {
     max-width: 380px;
     padding-top: rem(110px);
-    padding-left: rem(128px);
+    margin-left: rem(215px);//130
+    @supports(margin-left: auto){
+        margin-left: rem(130px);//130
+    }
 }
 
 .container-fashion-figure__img {

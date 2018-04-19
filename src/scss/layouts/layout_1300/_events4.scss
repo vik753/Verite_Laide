@@ -33,7 +33,11 @@
 .events-figure__figcaption_text {
     max-width: 380px;
     top: -92px;
-    left: 80px;
+    left: 200px;
+    @supports (left: auto) {
+        //override IE11 - margin-left: 155px;
+        left:80px;
+    }
 }
 
 .events-figure__button {

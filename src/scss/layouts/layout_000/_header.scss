@@ -15,7 +15,6 @@ body {
         left: 0;
         border: 1px solid #000;
         border-left: none;
-        z-index: 1;
     }
 }
 
@@ -59,7 +58,7 @@ body {
     max-height: rem(25px);
     fill: #a1a1a1;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
 }
 
 .topMenu__svglink {

@@ -56,7 +56,11 @@
     max-width: 275px;
     position: relative;
     top: rem(-53px);
-    left: rem(20px);
+    left: rem(60px);
+    @supports (left: auto) {
+        //override IE11 - margin-left: 155px;
+        left:20px;
+    }
 }
 
 .events-figure__figcaption_text-ellipsis {

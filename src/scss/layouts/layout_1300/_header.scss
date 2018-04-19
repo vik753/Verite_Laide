@@ -10,3 +10,10 @@
     top: 48px;
 }
 
+.topMenu__link_facebook_svg-icon,
+.topMenu__link_instagram_svg-icon,
+.topMenu__link_share_svg-icon {
+    &:hover{
+        fill: #7b7b7b;
+    }
+}
