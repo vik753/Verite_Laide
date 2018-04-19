@@ -16,12 +16,12 @@ mix.copy('src/*.html', 'dist/')
   .copyDirectory('src/fonts', 'dist/fonts/')
   .babel([ //.scripts ***default without Babel convertation***
     'node_modules/svgxuse/svgxuse.js', //'npm install --save svgxuse'  SVG usage for IE11
-    //'src/js/ssm.min.js', //for create breackpoints
+    'src/js/ssm.min.js', //for create breackpoints
     'src/js/smooth-scroll.min.js', //smooth-scroll
-    //'src/js/slick.min.js', //for Slick
+    'src/js/slick.min.js', //for Slick
     //'src/js/jquery.bxslider.js', //for BxSlider
-    //'src/js/isotope.pkgd.min.js', //isotope
-    //'src/js/viewportchecker.js', //viewportchecker
+    'src/js/isotope.pkgd.min.js', //isotope
+    'src/js/viewportchecker.js', //viewportchecker
     'src/js/script.js' //my scripts
   ], 'dist/js/script.js')
   .sass('src/scss/style.scss', 'dist/css/')

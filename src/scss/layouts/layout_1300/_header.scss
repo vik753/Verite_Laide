@@ -10,10 +10,19 @@
     top: 48px;
 }
 
+.topMenu__link,
+.footMenu__link,
+.footMenu__svglink {
+    transition: 0.7s ease;
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
 .topMenu__link_facebook_svg-icon,
 .topMenu__link_instagram_svg-icon,
 .topMenu__link_share_svg-icon {
-    &:hover{
+    &:hover {
         fill: #7b7b7b;
     }
 }

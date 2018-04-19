@@ -1,0 +1,97 @@
+*{
+    font-family: $mainFont;
+}
+
+.portfolioPage-mainContainer {
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    margin: 20px 20px 0 0;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-left: none;
+    position: relative;
+}
+
+.portfolioPage-header__link-home {
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    background: #fff;
+    padding: 0 0.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+//=====gallery==============
+//===========gallery-box-NAV=====================
+.container-portfolioPage__galleryBlock {
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.portfolio__img {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.galleryBlock__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.galleryBlock__btn {
+    color: $blackThemeColor;
+    padding: 0.7rem 0.5rem;
+    position: relative;
+    &:focus {
+        outline: none;
+        &::after {
+            position: absolute;
+            content: '';
+            width: rem(30px);
+            height: 2px;
+            background: $blackBackground;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+    }
+}
+
+.gutter-sizer {
+    width: rem(10px);
+}
+
+//=====footer============
+
+.portfolioPage-footer{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: $blackBackground;
+    opacity: 0.95;
+}
+
+.portfolioPage-footer__text{
+    text-align: left;
+    font-size: rem(12px);
+    color: $whiteThemeColor;
+}
+
+.portfolioPage-footer__company{
+    text-align: right;
+    font-size: rem(14px);
+    color: $whiteThemeColor;
+    text-transform: uppercase;
+    font-weight: 600;
+}

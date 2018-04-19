@@ -25,7 +25,7 @@ function mobTopMenuOpen() {
 }
 
 function mobTopMenuClose() {
-  //console.log('click');
+  // console.log('click');
   navTopMobMenu.css({
     animation: 'bounceOutUp 1s',
   });
@@ -38,6 +38,27 @@ function mobTopMenuClose() {
     });
   }, 900);
 }
+
+// ============Portfolio-galary=====================
+
+let $portfolioGallery = $('.portfolio__gallery').isotope({
+  itemSelector: '.portfolio__img',
+  horizontalOrder: true,
+  layoutMode: 'masonry',
+  masonry: {
+    gutter: '.gutter-sizer'
+  }
+});
+
+$('.galleryBlock__btn').click(function () {
+  const $this = $(this);
+  const filter = '.' + $this.data('filter');
+  $portfolioGallery.isotope({
+    filter: filter
+  });
+});
+
+
 //=======================Media for js
 
 /* function initTablet() {
@@ -83,25 +104,6 @@ ssm.addState({
     initMobile();
   }
 });
-
-//============Portfolio-galary=====================
-/* 
-let $portfolioGallery = $('.portfolio__gallery').isotope({
-  itemSelector: '.portfolio__img',
-  horizontalOrder: true,
-  layoutMode: 'masonry',
-  masonry: {
-    gutter: '.gutter-sizer'
-  }
-});
-
-$(".galleryBlock__btn").click(function() {
-  const $this = $(this);
-  const filter = "." + $this.data('filter');
-  $portfolioGallery.isotope({
-    filter: filter
-  });
-}); */
 
 //===================SlickSlider===============
 
