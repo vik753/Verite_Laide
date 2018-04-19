@@ -3842,6 +3842,7 @@ body {
   cursor: pointer;
   -webkit-transform: scaleY(0.6);
           transform: scaleY(0.6);
+  z-index: 10;
 }
 
 .nav-topMenu {
@@ -4747,9 +4748,12 @@ body {
             transform: translateX(-50%);
     bottom: 42px;
   }
+  .contact-form__title {
+    font-size: 1rem;
+  }
   .contact-form__title::after {
     top: 6px;
-    left: 134px;
+    left: 130px;
   }
   .contact-form__title::before {
     content: '';
