@@ -1,3 +1,10 @@
+.container-contact-form{
+    &::after {
+        position: absolute;
+        content: '';
+    }
+}
+
 .contact-form {
     position: relative;
     display: flex;
@@ -7,7 +14,7 @@
     min-width: auto;
     left: calc(50% - 10px);
     transform: translateX(-50%);
-    bottom: -55px;
+    bottom: 42px;
 }
 
 .contact-form__title {

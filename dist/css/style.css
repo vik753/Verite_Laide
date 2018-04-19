@@ -3782,6 +3782,7 @@ html {
   font-weight: 400;
   background: #ffffff;
   border-radius: 50%;
+  z-index: 2;
 }
 
 .container-major__num1 {
@@ -3823,6 +3824,7 @@ body {
   left: 0;
   border: 1px solid #000;
   border-left: none;
+  z-index: 1;
 }
 
 .header {
@@ -4266,6 +4268,10 @@ body {
   transition: 0.1s;
 }
 
+.container-contact-form {
+  position: relative;
+}
+
 .contact-form {
   position: absolute;
   display: -webkit-box;
@@ -4395,6 +4401,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5px;
 }
 
 .footMenu__svglink:not(:last-of-type) {
@@ -4719,6 +4726,10 @@ body {
     width: 260px;
     padding: 1.5625rem 0;
   }
+  .container-contact-form::after {
+    position: absolute;
+    content: '';
+  }
   .contact-form {
     position: relative;
     display: -webkit-box;
@@ -4734,7 +4745,7 @@ body {
     left: calc(50% - 10px);
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: -55px;
+    bottom: 42px;
   }
   .contact-form__title::after {
     top: 6px;
@@ -5018,7 +5029,7 @@ body {
             justify-content: space-between;
     width: 1140px;
     max-width: 1140px;
-    bottom: -80px;
+    bottom: 45px;
   }
   .contact-form__title {
     font-size: 1.125rem;
@@ -5073,6 +5084,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 0;
   }
   .footMenu__svglink:not(:last-of-type) {
     margin-right: 2.5rem;

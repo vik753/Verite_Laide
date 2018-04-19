@@ -1,15 +1,15 @@
 //min-width:1300px
-
-.footer{
+.footer {
     margin-top: 130px;
 }
 
-.footMenu__item__socialIcons{
+.footMenu__item__socialIcons {
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 
-.footMenu__svglink:not(:last-of-type){
+.footMenu__svglink:not(:last-of-type) {
     margin-right: rem(40px);
 }
 

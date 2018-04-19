@@ -4,7 +4,7 @@ body {
 
 .container-major {
     position: relative;
-    padding: 0 rem(20px) rem(50px) 0;
+    padding: 0 1.25rem 3.125rem 0;
     overflow: hidden;
     &::before {
         content: '';
@@ -15,6 +15,7 @@ body {
         left: 0;
         border: 1px solid #000;
         border-left: none;
+        z-index: 1;
     }
 }
 
