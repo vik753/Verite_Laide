@@ -4460,6 +4460,7 @@ body {
   bottom: 5rem;
   right: 3rem;
   z-index: 5;
+  opacity: 0.5;
 }
 
 .container-portfolioPage__galleryBlock_goTop a {
@@ -4480,7 +4481,6 @@ body {
   color: #fff;
   border-radius: 50%;
   background: #000;
-  opacity: 0.8;
 }
 
 .portfolio__img {

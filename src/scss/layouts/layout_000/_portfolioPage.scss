@@ -43,6 +43,7 @@
     bottom: 5rem;
     right: 3rem;
     z-index: 5;
+    opacity: 0.5;
     & a {
         display: flex;
         text-align: center;
@@ -55,7 +56,6 @@
         color: #fff;
         border-radius: 50%;
         background: #000;
-        opacity: 0.8;
     }
 }
 
