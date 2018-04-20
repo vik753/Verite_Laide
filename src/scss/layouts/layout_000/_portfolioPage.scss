@@ -1,4 +1,4 @@
-*{
+* {
     font-family: $mainFont;
 }
 
@@ -25,11 +25,38 @@
     font-size: 1.125rem;
 }
 
+.portfolioPage-header__title {
+    @include headingMedium;
+    font-size: 40px;
+}
+
 //=====gallery==============
 //===========gallery-box-NAV=====================
 .container-portfolioPage__galleryBlock {
     margin: 1rem auto;
     width: 100%;
+    position: relative;
+}
+
+.container-portfolioPage__galleryBlock_goTop {
+    position: fixed;
+    bottom: 5rem;
+    right: 3rem;
+    z-index: 5;
+    & a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-end;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 50%;
+        background: #000;
+        opacity: 0.8;
+    }
 }
 
 .portfolio__img {
@@ -70,8 +97,7 @@
 }
 
 //=====footer============
-
-.portfolioPage-footer{
+.portfolioPage-footer {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -82,13 +108,13 @@
     opacity: 0.95;
 }
 
-.portfolioPage-footer__text{
+.portfolioPage-footer__text {
     text-align: left;
     font-size: rem(12px);
     color: $whiteThemeColor;
 }
 
-.portfolioPage-footer__company{
+.portfolioPage-footer__company {
     text-align: right;
     font-size: rem(14px);
     color: $whiteThemeColor;

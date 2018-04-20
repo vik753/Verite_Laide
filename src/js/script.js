@@ -1,65 +1,68 @@
-//=============Header Menu===============
+//= ============Header Menu===============
 
-console.log('Hello 333');
-var scroll = new SmoothScroll('a[href*="#"]');
+console.log('Hello 333')
+var scroll = new SmoothScroll('a[href*="#"]')
 
 /* $(document).click(function (e){
   console.log(e.target);
 }) */
 
-var topMobMenuOpen = $('.svg-icon__mobIco-open');
-var navTopMobMenu = $('.nav-topMenu');
-var navTopMobMenuClose = $('.svg-icon__mobIco');
+var topMobMenuOpen = $('.svg-icon__mobIco-open')
+var navTopMobMenu = $('.nav-topMenu')
+var navTopMobMenuClose = $('.svg-icon__mobIco')
 
-topMobMenuOpen.on('click', mobTopMenuOpen);
-navTopMobMenuClose.on('click', mobTopMenuClose);
+topMobMenuOpen.on('click', mobTopMenuOpen)
+navTopMobMenuClose.on('click', mobTopMenuClose)
 
-function mobTopMenuOpen() {
+function mobTopMenuOpen () {
   topMobMenuOpen.css({
     display: 'none'
-  });
+  })
   navTopMobMenu.css({
     display: 'block',
     animation: 'bounceInDown 1s'
-  });
+  })
 }
 
-function mobTopMenuClose() {
+function mobTopMenuClose () {
   // console.log('click');
   navTopMobMenu.css({
-    animation: 'bounceOutUp 1s',
-  });
+    animation: 'bounceOutUp 1s'
+  })
   setTimeout(() => {
     navTopMobMenu.css({
       display: 'none'
-    });
+    })
     topMobMenuOpen.css({
-      display: 'block',
-    });
-  }, 900);
+      display: 'block'
+    })
+  }, 900)
 }
 
 // ============Portfolio-galary=====================
+let $portfolioGallery = $('.portfolio__gallery')
 
-let $portfolioGallery = $('.portfolio__gallery').isotope({
-  itemSelector: '.portfolio__img',
-  horizontalOrder: true,
-  layoutMode: 'masonry',
-  masonry: {
-    gutter: '.gutter-sizer'
-  }
-});
+$('.portfolio__gallery').imagesLoaded(function () {
+  $portfolioGallery.isotope({
+    itemSelector: '.portfolio__img',
+    horizontalOrder: true,
+    layoutMode: 'masonry',
+    filter: '.portfolio__img', // start filter
+    masonry: {
+      gutter: '.gutter-sizer'
+    }
+  })
+})
 
 $('.galleryBlock__btn').click(function () {
-  const $this = $(this);
-  const filter = '.' + $this.data('filter');
+  const $this = $(this)
+  const filter = '.' + $this.data('filter')
   $portfolioGallery.isotope({
     filter: filter
-  });
-});
+  })
+})
 
-
-//=======================Media for js
+//= ======================Media for js
 
 /* function initTablet() {
   device = 'tablet';
@@ -117,7 +120,7 @@ ssm.addState({
   });
 }); */
 
-//=================BX-Slider====================
+//= ================BX-Slider====================
 /*  //Initialize the slider
 $(document).ready(function() {
   $('.testimonials_slider').bxSlider({
@@ -128,7 +131,7 @@ $(document).ready(function() {
   });
 }); */
 
-//========Google-Maps==============
+//= =======Google-Maps==============
 /* var map;
 const cnt = {
   lat: 46.485878,
@@ -154,7 +157,7 @@ function initMap() {
   })
 } */
 
-//========================Animation========
+//= =======================Animation========
 
 /* jQuery(document).ready(function() {
   jQuery('.container-header').addClass("hidden").viewportChecker({

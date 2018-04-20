@@ -2,3 +2,35 @@
     width: calc(25% - 8px);
     max-width: 100%;
 }
+
+.portfolioPage-header__link-home:hover,
+.galleryBlock__btn:hover {
+    transition: 0.1s ease;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio__img:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.container-portfolioPage__galleryBlock_goTop a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.8;
+    &:hover {
+        transition: 0.1s ease;
+        transform: scale(1.1);
+    }
+}
