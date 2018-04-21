@@ -98,14 +98,11 @@
 
 //=====footer============
 .portfolioPage-footer {
-    position: fixed;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-    bottom: 0;
-    width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     background: $blackBackground;
-    opacity: 0.95;
 }
 
 .portfolioPage-footer__text {
