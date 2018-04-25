@@ -11,8 +11,11 @@
     bottom: 74px;
 }
 
-.container-contact-form__inner{
+.contact-form__context {
+    position: relative;
     width: 100%;
+    @include display(flex);
+    @include flex-direction(column);
 }
 
 .contact-form__title {

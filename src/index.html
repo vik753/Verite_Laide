@@ -170,10 +170,13 @@
     <!-- ============Contact-form======================= -->
     <div class="container-contact-form">
       <form action="#" class="contact-form" id="contact">
-        <h2 class="contact-form__title">Contact</h2>
-        <input type="text" class="contact-form__input_name" placeholder="NAME">
-        <input type="email" class="contact-form__input_email" placeholder="EMAIL">
-        <input type="button" class="contact-form__input_send" value="Send">
+        <div class="contact-form__context">
+            <h2 class="contact-form__title">Contact</h2>
+            <input type="text" class="contact-form__input_name" placeholder="NAME">
+            <input type="email" class="contact-form__input_email" placeholder="EMAIL">
+            <input type="button" class="contact-form__input_send" value="Send">
+        </div>
+        <!-- /.contact-form__context -->
         <div class="container-map">
           <div class="container-map__context">
               <p class="container-map__address"><b>Address:</b> Piazza Cinque Giornate, 3, 20100 Milano MI, Italy</p>
@@ -182,6 +185,7 @@
           <!-- /.container-map__context -->
           <div class="container-map__gMap" id="map"></div>
         </div>
+         <!-- /.container-map -->
       </form>
       
       <!-- /.container-map -->
