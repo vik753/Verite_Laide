@@ -1,10 +1,26 @@
-.contact-form {
+//**************min-width:1300px
+
+
+
+
+
+
+
+
+
+/* .contact-form {
+    
     position: relative;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-direction(row);
+    @include justify-content(space-between);
     width: 1140px;
     max-width: 1140px;
-    bottom: 45px;
+    bottom: 370px;
+}
+
+.container-contact-form__inner{
+    @include display(flex);
+    @include flex-direction(column);
 }
 
 .contact-form__title {
@@ -39,3 +55,23 @@
         @include blackButtonActive;
     }
 }
+
+.container-map{
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    @include display(flex);
+    @include justify-content(space-between);
+}
+
+.container-map__gMap{
+    position: relative;
+    width:845px;
+    height: 300px;
+    left: 0;
+}
+
+.container-map__context{
+    padding-right: 1rem;
+}
+ */

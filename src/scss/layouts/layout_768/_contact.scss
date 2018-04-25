@@ -7,23 +7,29 @@
 
 .contact-form {
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 355px;
     max-width: 355px;
     min-width: auto;
     left: calc(50% - 10px);
     transform: translateX(-50%);
-    bottom: 42px;
+    bottom: 20px;
 }
 
 .contact-form__title {
     font-size: rem(16px);
     &::after {
-        top: 6px;
+        position: absolute;
+        content: '';
+        top: 47px;
         left: 130px;
     }
     &::before {
+        position: absolute;
         content: '';
     }
+}
+
+.container-map__gMap{
+    position: relative;
+    height: 300px;
 }
