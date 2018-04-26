@@ -4,6 +4,7 @@
 }
 
 .portfolioPage-header__link-home:hover,
+.portfolioPage-header__link-homeContact:hover,
 .galleryBlock__btn:hover {
     transition: 0.1s ease;
     transform: scale(1.1);
@@ -33,4 +34,11 @@
         transition: 0.1s ease;
         transform: scale(1.1);
     }
+}
+
+.portfolioPage__footMenu_svg-icon {
+    transition: 0.5s ease;
+   &:hover{
+        transform: scale(1.2);
+   }
 }
