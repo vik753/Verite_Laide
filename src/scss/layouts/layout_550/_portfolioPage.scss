@@ -14,3 +14,10 @@
 .portfolioPage__footMenu_svg-icon {
     display: inline-block;
 }
+
+//=========slider==============
+
+.portfolioPage__slider_slide__text{
+    @include headingMedium;
+    top: calc(50% - 30px);
+}
