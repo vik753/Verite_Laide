@@ -76,8 +76,8 @@
 
 .container-portfolioPage__galleryBlock_goTop {
     position: fixed;
-    bottom: 5rem;
-    right: 3rem;
+    bottom: 7rem;
+    right: rem(5px);
     z-index: 5;
     opacity: 0.5;
     & a {

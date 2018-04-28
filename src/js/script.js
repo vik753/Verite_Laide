@@ -1,46 +1,46 @@
 //= ============Header Menu===============
 
-console.log('Hello 333')
-var scroll = new SmoothScroll('a[href*="#"]')
+console.log('Hello 333');
+var scroll = new SmoothScroll('a[href*="#"]');
 
 /* $(document).click(function (e){
   console.log(e.target);
 }) */
 
-var topMobMenuOpen = $('.svg-icon__mobIco-open')
-var navTopMobMenu = $('.nav-topMenu')
-var navTopMobMenuClose = $('.svg-icon__mobIco')
+var topMobMenuOpen = $('.svg-icon__mobIco-open');
+var navTopMobMenu = $('.nav-topMenu');
+var navTopMobMenuClose = $('.svg-icon__mobIco');
 
-topMobMenuOpen.on('click', mobTopMenuOpen)
-navTopMobMenuClose.on('click', mobTopMenuClose)
+topMobMenuOpen.on('click', mobTopMenuOpen);
+navTopMobMenuClose.on('click', mobTopMenuClose);
 
-function mobTopMenuOpen () {
+function mobTopMenuOpen() {
   topMobMenuOpen.css({
     display: 'none'
-  })
+  });
   navTopMobMenu.css({
     display: 'block',
     animation: 'bounceInDown 1s'
-  })
+  });
 }
 
-function mobTopMenuClose () {
+function mobTopMenuClose() {
   // console.log('click');
   navTopMobMenu.css({
     animation: 'bounceOutUp 1s'
-  })
+  });
   setTimeout(() => {
     navTopMobMenu.css({
       display: 'none'
-    })
+    });
     topMobMenuOpen.css({
       display: 'block'
-    })
+    });
   }, 900)
 }
 
 //= =======Google-Maps==============
-var map;
+var map
 const cnt = {
   lat: 45.462941,
   lng: 9.207026
@@ -56,19 +56,19 @@ function initMap() {
     map: map,
     title: '"Vérité Laide" photostudio',
     icon: 'img/VeriteLaideGmapIco.png'
-  })
+  });
   const infoWindow = new google.maps.InfoWindow({
     content: '"Vérité Laide" photostudio, Piazza Cinque Giornate, 3, 20100 Milano MI, Italy'
-  })
+  });
   marker.addListener('click', function() {
     infoWindow.open(map, marker)
-  })
+  });
 }
 
 // ============Portfolio-galary=====================
-let $portfolioGallery = $('.portfolio__gallery')
+let $portfolioGallery = $('.portfolio__gallery');
 
-$('.portfolio__gallery').imagesLoaded(function () {
+$('.portfolio__gallery').imagesLoaded(function() {
   $portfolioGallery.isotope({
     itemSelector: '.portfolio__img',
     horizontalOrder: true,
@@ -77,28 +77,40 @@ $('.portfolio__gallery').imagesLoaded(function () {
     masonry: {
       gutter: '.gutter-sizer'
     }
-  })
-})
+  });
+});
 
-$('.galleryBlock__btn').click(function () {
+$('.galleryBlock__btn').click(function() {
   const $this = $(this)
   const filter = '.' + $this.data('filter')
   $portfolioGallery.isotope({
     filter: filter
-  })
-})
+  });
+});
 
 // ===================SlickSlider===============
 
-$(document).ready(function () {
+$(document).ready(function() {
   $('.portfolioPage__slider').slick({
     infinite: true,
     speed: 1200,
     dots: true,
     arrows: false,
     autoplay: true
-  })
-})
+  });
+});
+
+//= =======================Animation========
+
+$(document).ready(function() {
+  $('.portfolioPage-mainContainer').addClass('hidden').viewportChecker({
+    classToAdd: 'visible animated lightSpeedIn',
+    offset: 100
+  });
+  setTimeout(function() {
+    $('.portfolioPage-mainContainer').removeClass('animated lightSpeedIn');
+  }, 1000); // Delete those classes - to avoid bugs
+});
 
 //= ======================Media for js
 
@@ -166,16 +178,5 @@ $(document).ready(function() {
     stopAutoOnClick: true,
     pause: 4000,
     controls: false,
-  });
-}); */
-
-
-
-//= =======================Animation========
-
-/* jQuery(document).ready(function() {
-  jQuery('.container-header').addClass("hidden").viewportChecker({
-    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
-    offset: 100
   });
 }); */
