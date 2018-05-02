@@ -23,6 +23,7 @@
     @include headingLarge;
     font-size: rem(36px);
     text-align: center;
+    animation-duration: 3s;
     &::after{
         position: absolute;
         top: -20px;
@@ -44,6 +45,7 @@
     color: $blackThemeColor;
     padding-top: rem(15px);
     line-height: 1.6;
+    animation-duration: 3s;
 }
 
 .fashion-figure__button{

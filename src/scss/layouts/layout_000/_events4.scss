@@ -24,6 +24,7 @@
     @include headingLarge;
     font-size: rem(36px);
     text-align: center;
+    animation-duration: 3s;
     &::after {
         position: absolute;
         top: -20px;
@@ -36,18 +37,19 @@
     }
 }
 
-.events-figure__figcaption_text-end{
+.events-figure__figcaption_text-end {
     display: none;
 }
 
-.events-figure__figcaption_text{
+.events-figure__figcaption_text {
     font-size: rem(14px);
     color: $blackThemeColor;
     padding-top: rem(15px);
     line-height: 1.6;
+    animation-duration: 3s;
 }
 
-.events-figure__button{
+.events-figure__button {
     @include whiteButton;
     display: block;
     max-width: 250px;
@@ -55,7 +57,7 @@
     font-size: rem(16px);
     padding: rem(20px) 0;
     text-align: center;
-    &:active{
+    &:active {
         @include whiteButtonActive;
     }
 }

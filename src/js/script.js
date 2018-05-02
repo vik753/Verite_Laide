@@ -2,10 +2,9 @@
 
 console.log('Hello 333');
 var scroll = new SmoothScroll('a[href*="#"]');
+var deviceWidth = null;
 
-/* $(document).click(function (e){
-  console.log(e.target);
-}) */
+//=====mobile menu main page===============
 
 var topMobMenuOpen = $('.svg-icon__mobIco-open');
 var navTopMobMenu = $('.nav-topMenu');
@@ -65,6 +64,119 @@ function initMap() {
   });
 }
 
+
+//= =======================Animation========
+
+jQuery(document).ready(function() {
+
+  //=======mainPage animation===============
+
+  jQuery('.container-pageCover').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInLeft', // Class to add to the elements when they are visible
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.fashion-figure__figcaption_title').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.fashion-figure__figcaption_text').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.portrait-figure__figcaption_title').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.portrait-figure__figcaption_text').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+ jQuery('.events-figure__figcaption_title').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.events-figure__figcaption_text').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.contact-form').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+  //=======portfolioPage animation===============
+
+  jQuery('.portfolioPage-header').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+
+  jQuery('.portfolioPage-slider__container').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeInDown',
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+
+  jQuery('.galleryBlock__nav').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated lightSpeedIn',
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.portfolio__gallery').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInUp',
+    //offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.portfolio__img').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInUp',
+    //offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.portfolioPage-footer').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceIn',
+    offset: 80,
+    removeClassAfterAnimation: true,
+  });
+
+});
+
+
+
 // ============Portfolio-galary=====================
 let $portfolioGallery = $('.portfolio__gallery');
 
@@ -81,6 +193,8 @@ $('.portfolio__gallery').imagesLoaded(function() {
 });
 
 $('.galleryBlock__btn').click(function() {
+  $('.portfolio__img').removeClass('hidden animated');
+  //$('.portfolio__img').addClass('visible');
   const $this = $(this)
   const filter = '.' + $this.data('filter')
   $portfolioGallery.isotope({
@@ -100,83 +214,22 @@ $(document).ready(function() {
   });
 });
 
-//= =======================Animation========
 
-$(document).ready(function() {
-  $('.portfolioPage-mainContainer').addClass('hidden').viewportChecker({
-    classToAdd: 'visible animated lightSpeedIn',
-    offset: 100
-  });
-  setTimeout(function() {
-    $('.portfolioPage-mainContainer').removeClass('animated lightSpeedIn');
-  }, 1000); // Delete those classes - to avoid bugs
-});
 
-//= ======================Media for js
+/* $(document).click(function (e){
+  console.log(e.target);
+}) */
 
-/* function initTablet() {
-  device = 'tablet';
-  $('.header__menu_link').css({
-    backgroundColor: "transparent",
-    borderBottom: '1px solid transparent',
-    border: "1px solid transparent",
-    fontStyle: 'normal',
-    left: '0',
-    width: 'auto'
-  });
-}
+//= ======================Check wieport width
 
-function initMobile() {
-  device = 'mobile';
-  $('.header__menu_link').css({
-    border: "none",
-    backgroundColor: "rgba(0,0,0,0.9)"
-  });
-} */
+window.onload = function() {
+  deviceWidth = (window.innerWidth || document.documentElement.clientWidth);
+  console.log(deviceWidth >= 1300);
+};
 
-/* ssm.addState({
-  id: 'tablet',
-  query: '(max-width: 768px)',
-  onEnter: function() {
-    initTablet();
-  }
-});
+window.addEventListener('resize', function(event) {
+  deviceWidth = (window.innerWidth || document.documentElement.clientWidth);
+  console.log(deviceWidth >= 1300);
+}, false);
 
-ssm.addState({
-  id: 'tablet',
-  query: '(min-width: 575px)',
-  onEnter: function() {
-    initTablet();
-  }
-});
 
-ssm.addState({
-  id: 'mobile',
-  query: '(max-width: 576px)',
-  onEnter: function() {
-    initMobile();
-  }
-});
-
-//===================SlickSlider===============
-
-/* $(document).ready(function() {
-  $('.team_slider').slick({
-    infinite: true,
-    dots: true,
-    arrows: false,
-    autoplay: true,
-  //fade: true,
-  });
-}); */
-
-//= ================BX-Slider====================
-/*  //Initialize the slider
-$(document).ready(function() {
-  $('.testimonials_slider').bxSlider({
-    auto: true,
-    stopAutoOnClick: true,
-    pause: 4000,
-    controls: false,
-  });
-}); */

@@ -10,6 +10,7 @@
     right: rem(140px);
     @include display(flex);
     @include justify-content(space-between);
+    animation: bounceInLeft 1s;
 }
 
 .topMenu-open__mobIco,

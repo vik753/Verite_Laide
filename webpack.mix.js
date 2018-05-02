@@ -19,7 +19,6 @@ mix.copy('src/*.html', 'dist/')
     'src/js/ssm.min.js', //for create breackpoints
     'src/js/smooth-scroll.min.js', //smooth-scroll
     'src/js/slick.min.js', //for Slick
-    //'src/js/jquery.bxslider.js', //for BxSlider
     'src/js/isotope.pkgd.min.js', //isotope
     'src/js/viewportchecker.js', //viewportchecker
     'src/js/script.js' //my scripts
