@@ -5,10 +5,23 @@
     padding: rem(95px) rem(35px) 0;
 }
 
+@keyframes startAnimatinCover {
+    from {
+        visibility: hidden;
+    }
+    90% {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
 .container-pageCover__inner {
     position: relative;
     max-width: rem(230px);
     margin: 0 auto; //border: 1px solid red;
+    animation: startAnimatinCover 6s;
 }
 
 .pageCover__title1 {
@@ -95,4 +108,87 @@
 //========social icons============================
 .pageCover__item__socialIcons {
     display: none;
+}
+
+//============Logo animation=============
+@keyframes anim2 {
+    0% {
+        visibility: visible;
+        left: 50%;
+        transform: translate(-50%);
+        width: 10%;
+        height: auto;
+        opacity: 1;
+    }
+    80% {
+        visibility: visible;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100vw;
+        height: auto;
+        opacity: 1;
+    }
+}
+
+.mainPage-header__svgLogo-container {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 85px; //transform: translate(-50%);
+    z-index: -1;
+    animation: anim2 6s linear;
+    visibility: hidden;
+}
+
+@keyframes logoAnimation {
+    from {
+        visibility: visible;
+        opacity: 0;
+        fill: #fff;
+        stroke: #ffa600;
+        stroke-width: 1px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    35% {
+        stroke: #ff0000;
+    }
+    50% {
+        stroke: #2fff00;
+    }
+    65% {
+        stroke: #0008ff;
+    }
+    75% {
+        fill: #fff;
+        stroke: #353535;
+        stroke-width: 1px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 106;
+    }
+    80% {
+        fill: #747170;
+    }
+    90% {
+        stroke-width: 0;
+        opacity: 0.2;
+    }
+    100% {
+        fill: #ffffff00;
+        opacity: 0;
+    }
+}
+
+.mainPage-header__svg-logo {
+    fill: #000;
+    width: 100%;
+    height: auto;
+    animation: logoAnimation 6s ease-in-out 1;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
 }

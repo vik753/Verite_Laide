@@ -20,3 +20,16 @@
     fill: #fff;
     cursor: pointer;
 }
+
+.footMenu__svglink {
+    transition: 0.1s ease;
+    &:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.footMenu__link:hover {
+    animation: pulse 0.5s;
+    color: #c0c0c0;
+    }

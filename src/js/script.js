@@ -59,7 +59,7 @@ function initMap() {
   const infoWindow = new google.maps.InfoWindow({
     content: '"Vérité Laide" photostudio, Piazza Cinque Giornate, 3, 20100 Milano MI, Italy'
   });
-  marker.addListener('click', function() {
+  marker.addListener('click', function () {
     infoWindow.open(map, marker)
   });
 }
@@ -67,16 +67,16 @@ function initMap() {
 
 //= =======================Animation========
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 
   //=======mainPage animation===============
 
-  jQuery('.container-pageCover').addClass("hidden").viewportChecker({
+ /*  jQuery('.container-pageCover').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated bounceInLeft', // Class to add to the elements when they are visible
     offset: 10,
     removeClassAfterAnimation: true,
-  });
+  }); */
 
   jQuery('.fashion-figure__figcaption_title').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
     removeClassAfterAnimation: true,
   });
 
- jQuery('.events-figure__figcaption_title').addClass("hidden").viewportChecker({
+  jQuery('.events-figure__figcaption_title').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
     offset: 100,
@@ -122,7 +122,7 @@ jQuery(document).ready(function() {
 
   jQuery('.contact-form').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
-    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
+    classToAdd: 'visible animated bounceInUp', // Class to add to the elements when they are visible
     offset: 10,
     removeClassAfterAnimation: true,
   });
@@ -152,13 +152,6 @@ jQuery(document).ready(function() {
     removeClassAfterAnimation: true,
   });
 
-  jQuery('.portfolio__gallery').addClass("hidden").viewportChecker({
-    classToRemove: 'hidden',
-    classToAdd: 'visible animated bounceInUp',
-    //offset: 10,
-    removeClassAfterAnimation: true,
-  });
-
   jQuery('.portfolio__img').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated bounceInUp',
@@ -180,7 +173,7 @@ jQuery(document).ready(function() {
 // ============Portfolio-galary=====================
 let $portfolioGallery = $('.portfolio__gallery');
 
-$('.portfolio__gallery').imagesLoaded(function() {
+$('.portfolio__gallery').imagesLoaded(function () {
   $portfolioGallery.isotope({
     itemSelector: '.portfolio__img',
     horizontalOrder: true,
@@ -192,7 +185,7 @@ $('.portfolio__gallery').imagesLoaded(function() {
   });
 });
 
-$('.galleryBlock__btn').click(function() {
+$('.galleryBlock__btn').click(function () {
   $('.portfolio__img').removeClass('hidden animated');
   //$('.portfolio__img').addClass('visible');
   const $this = $(this)
@@ -204,7 +197,7 @@ $('.galleryBlock__btn').click(function() {
 
 // ===================SlickSlider===============
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.portfolioPage__slider').slick({
     infinite: true,
     speed: 1200,
@@ -222,14 +215,12 @@ $(document).ready(function() {
 
 //= ======================Check wieport width
 
-window.onload = function() {
+/* window.onload = function () {
   deviceWidth = (window.innerWidth || document.documentElement.clientWidth);
-  console.log(deviceWidth >= 1300);
+  //console.log(deviceWidth >= 1300);
 };
 
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function (event) {
   deviceWidth = (window.innerWidth || document.documentElement.clientWidth);
-  console.log(deviceWidth >= 1300);
-}, false);
-
-
+  //console.log(deviceWidth >= 1300);
+}, false); */
