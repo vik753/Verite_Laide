@@ -71,13 +71,6 @@ jQuery(document).ready(function () {
 
   //=======mainPage animation===============
 
- /*  jQuery('.container-pageCover').addClass("hidden").viewportChecker({
-    classToRemove: 'hidden',
-    classToAdd: 'visible animated bounceInLeft', // Class to add to the elements when they are visible
-    offset: 10,
-    removeClassAfterAnimation: true,
-  }); */
-
   jQuery('.fashion-figure__figcaption_title').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
@@ -171,25 +164,50 @@ jQuery(document).ready(function () {
 
 
 // ============Portfolio-galary=====================
+let filterData = null;
+
+//index.html fashion-figure__button click
+$('.fashion-figure__button').click(function (){
+  localStorage.setItem('galeryFilter', '.fashion');
+});
+//index.html portrait-figure__button click
+$('.portrait-figure__button').click(function (){
+  localStorage.setItem('galeryFilter', '.portrait');
+});
+//index.html events-figure__button click
+$('.events-figure__button').click(function (){
+  localStorage.setItem('galeryFilter', '.events');
+});
+
+//*********** */
 let $portfolioGallery = $('.portfolio__gallery');
 
 $('.portfolio__gallery').imagesLoaded(function () {
+
+  filterData = localStorage.getItem('galeryFilter');//local storage
+
+  if(!filterData){// for local storage
+    filterData = '.portfolio__img';
+  }
+
   $portfolioGallery.isotope({
     itemSelector: '.portfolio__img',
     horizontalOrder: true,
     layoutMode: 'masonry',
-    filter: '.portfolio__img', // start filter
+    filter: filterData, // start filter
     masonry: {
       gutter: '.gutter-sizer'
     }
   });
+
+  localStorage.removeItem('galeryFilter');// for local storage
+
 });
 
-$('.galleryBlock__btn').click(function () {
+$('.filterButton').click(function () {
   $('.portfolio__img').removeClass('hidden animated');
-  //$('.portfolio__img').addClass('visible');
-  const $this = $(this)
-  const filter = '.' + $this.data('filter')
+  const $this = $(this);
+  const filter = '.' + $this.data('filter');
   $portfolioGallery.isotope({
     filter: filter
   });
