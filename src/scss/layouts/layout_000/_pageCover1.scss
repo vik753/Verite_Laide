@@ -21,7 +21,7 @@
     position: relative;
     max-width: rem(230px);
     margin: 0 auto; //border: 1px solid red;
-    animation: startAnimatinCover 6s;
+    animation: startAnimatinCover 3s;
 }
 
 .pageCover__title1 {
@@ -137,7 +137,7 @@
     left: 0;
     top: 85px; //transform: translate(-50%);
     z-index: -1;
-    animation: anim2 6s linear;
+    animation: anim2 3s linear 1;
     visibility: hidden;
 }
 
@@ -187,7 +187,7 @@
     fill: #000;
     width: 100%;
     height: auto;
-    animation: logoAnimation 6s ease-in-out 1;
+    animation: logoAnimation 3s ease-in-out 1;
     visibility: hidden;
     opacity: 0;
     z-index: 2;

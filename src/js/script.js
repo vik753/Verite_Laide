@@ -71,6 +71,13 @@ jQuery(document).ready(function () {
 
   //=======mainPage animation===============
 
+  jQuery('.container-fashion').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInUp', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
   jQuery('.fashion-figure__figcaption_title').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
@@ -85,6 +92,13 @@ jQuery(document).ready(function () {
     removeClassAfterAnimation: true,
   });
 
+  jQuery('.container-portrait').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInUp', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
   jQuery('.portrait-figure__figcaption_title').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
@@ -95,6 +109,13 @@ jQuery(document).ready(function () {
   jQuery('.portrait-figure__figcaption_text').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true,
+  });
+
+  jQuery('.container-events').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated bounceInUp', // Class to add to the elements when they are visible
     offset: 100,
     removeClassAfterAnimation: true,
   });
@@ -120,11 +141,24 @@ jQuery(document).ready(function () {
     removeClassAfterAnimation: true,
   });
 
+  jQuery('.footer').viewportChecker({
+    classToAdd: 'animated bounceIn',
+    offset: 80,
+    removeClassAfterAnimation: true,
+  });
+
   //=======portfolioPage animation===============
 
-  jQuery('.portfolioPage-header').addClass("hidden").viewportChecker({
+   jQuery('.portfolioPage-header__link').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
-    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
+    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
+    offset: 10,
+    removeClassAfterAnimation: true,
+  });
+
+   jQuery('.portfolioPage-header__title').addClass("hidden").viewportChecker({
+    classToRemove: 'hidden',
+    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
     offset: 10,
     removeClassAfterAnimation: true,
   });
@@ -140,7 +174,7 @@ jQuery(document).ready(function () {
 
   jQuery('.galleryBlock__nav').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
-    classToAdd: 'visible animated lightSpeedIn',
+    classToAdd: 'visible animated fadeInDown',
     offset: 10,
     removeClassAfterAnimation: true,
   });
@@ -152,9 +186,8 @@ jQuery(document).ready(function () {
     removeClassAfterAnimation: true,
   });
 
-  jQuery('.portfolioPage-footer').addClass("hidden").viewportChecker({
-    classToRemove: 'hidden',
-    classToAdd: 'visible animated bounceIn',
+  jQuery('.portfolioPage-footer').viewportChecker({
+    classToAdd: 'animated bounceIn',
     offset: 80,
     removeClassAfterAnimation: true,
   });
