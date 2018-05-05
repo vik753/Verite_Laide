@@ -70,7 +70,7 @@ function initMap() {
 jQuery(document).ready(function () {
 
   //=======mainPage animation===============
-
+  
   jQuery('.container-fashion').addClass("hidden").viewportChecker({
     classToRemove: 'hidden',
     classToAdd: 'visible animated bounceInUp', // Class to add to the elements when they are visible

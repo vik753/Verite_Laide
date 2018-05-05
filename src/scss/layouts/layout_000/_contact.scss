@@ -73,8 +73,14 @@
 }
 
 //======gMap==========
+
 .container-map__address {
     margin-top: 1.5rem;
+}
+
+.container-map__icon{
+    width: 1rem;
+    height: 1rem;
 }
 
 .container-map__address__phone {
@@ -86,4 +92,22 @@
     height: 200px;
     margin: 1rem auto;
     border: 1px solid $blackThemeColor;
+}
+
+.indexGoTop{
+    position: absolute;
+    right: 30px;
+    bottom: 670px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.5;
 }

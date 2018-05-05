@@ -11,6 +11,12 @@
     text-transform: uppercase;
 }
 
+@mixin headingMediumSLight {
+    font-weight: 400;
+    font-size: rem(30px);
+    text-transform: uppercase;
+}
+
 @mixin headingSmallLight {
     font-weight: 600;
     font-size: rem(18px);

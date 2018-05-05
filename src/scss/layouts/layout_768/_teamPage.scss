@@ -1,0 +1,58 @@
+//7668px
+.teamPage-header__link-home {
+    right: 21.5rem;
+}
+
+.teamPage-header__link-homePortfolio {
+    right: 11rem;
+}
+
+.teamPage-header__link-homeContact {
+    right: 2rem;
+}
+
+.teamPage-header__title {
+    @include headingLarge;
+    padding-top: rem(250px);
+    text-align: center;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: 'TEAM';
+        top: 123px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: rem(200px);
+        font-weight: 400;
+        z-index: -1;
+        white-space: nowrap;
+        color: rgba(229, 228, 228, 0.45);
+    }
+}
+
+.teamPage-block-container {
+    display: flex;
+}
+
+.teamPage-block__img_container-right{
+    order: 2;
+}
+
+.teamPage-block__img_container,
+.teamPage-block__context {
+    flex-basis: 50%;
+}
+
+.teamPage-block__context {
+    margin-left: rem(100px);
+    align-self: center;
+}
+
+.teamPage-block__context_right{
+    margin-left: rem(70px);
+    margin-right: rem(100px);
+}
+
+.teamPage-block__context_title {
+    padding-top: 0;
+}

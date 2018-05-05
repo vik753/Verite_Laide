@@ -21,11 +21,14 @@
     cursor: pointer;
     color: #000000;
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .portfolioPage-header__link-home {
-    right: 9.5rem;
+    right: rem(207px);
+}
+.portfolioPage-header__link-team {
+    right: rem(128px);
 }
 
 .portfolioPage-header__link-homeContact {
@@ -35,6 +38,7 @@
 .portfolioPage-header__title {
     @include headingMedium;
     font-size: 40px;
+    padding-top: 1rem;
 }
 
 //=========slider==============
